@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Балдырған{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/ede4e9a973.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="intro-header">
+                <a href="platform.html" class="logo"><i class="fas fa-child"></i>baldyrgan</a>
+
+                <div class="search">
+                    <input type="text" placeholder="Поиск...">
+                </div>
+
+                <div class="menu">
+                    <a href=""><i class="fa-solid fa-bars"></i></a>
+                </div>
+
+                <div class="user">
+                    <a href=""><i class="fas fa-user"></i>Мұқағали Арын</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="main">
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href=""><i class="fa-solid fa-house"></i> Басты бет</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-gamepad"></i> Scratch</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-robot"></i> Робототехника</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-code"></i> Бағдарламалау</a>
+                    </li>
+                </ul>
+                <form>
+                    <h4>Сыныптар</h4>
+                    <div class="input-group">
+                        <input type="checkbox" id="check1">
+                        <label for="check1">1-сынып</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="check2">
+                        <label for="check2">2-сынып</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="check3">
+                        <label for="check3">3-сынып</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="check4">
+                        <label for="check4">4-сынып</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container">
+                <div class="block">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =========================================================================== -->
+    <div class="footer">
+        <div class="intro-footer">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-child"></i> baldyrgan</a>
+                <p>&copy; baldyrgan 2022</p>
+                <small>Барлық авторлық құқықтар сақталған</small>
+            </div>
+
+            <div class="ln">
+                <ul>
+                    <li>
+                        <a href="">Қазақша</a>
+                    </li>
+                    <li>
+                        <a href="">Русский</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
