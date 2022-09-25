@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Lesson, Subject
+from .models import Lesson, Subject, Task
 from django.db.models import Q
 
 
@@ -52,6 +52,7 @@ def home(request):
     return render(request, 'lesson/index.html', context)
 
 
+# ======================================================================
 def subject_detail(request, slug):
     subject = get_object_or_404(Subject, slug=slug)
     lessons = Lesson.objects.filter(subject=subject)
@@ -107,3 +108,32 @@ def subject_detail(request, slug):
         }
 
     return render(request, 'lesson/subject_detail.html', context)
+
+
+# ======================================================================
+def lesson_detail(request, slug):
+    lesson = get_object_or_404(Lesson, slug=slug)
+    lessons = Lesson.objects.filter(subject=lesson.subject, class_room=lesson.class_room)
+    lesson.view = lesson.view + 1
+    lesson.save()
+
+    context = {
+        'lesson': lesson,
+        'lessons': lessons
+    }
+
+    return render(request, 'lesson/lesson_detail.html', context)
+
+
+# ========================================================================
+def tasks(request, slug):
+    lesson = get_object_or_404(Lesson, slug=slug)
+    task_list = Task.objects.filter(lesson=lesson)
+    lessons = Lesson.objects.filter(subject=lesson.subject, class_room=lesson.class_room)
+
+    context = {
+        'lesson': lesson,
+        'lessons': lessons,
+        'tasks': task_list
+    }
+    return render(request, 'lesson/tasks.html', context)

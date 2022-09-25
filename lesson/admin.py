@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subject, Lesson
+from .models import Subject, Lesson, Task
 from django.contrib.auth.models import Group
 
 
@@ -8,9 +8,16 @@ class SubjectAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 
+class TaskTabularInline(admin.TabularInline):
+    model = Task
+    extra = 1
+
+
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'class_room', 'subject', 'view', 'date_created',)
     search_fields = ('title',)
+
+    inlines = [TaskTabularInline, ]
 
 
 admin.site.register(Subject, SubjectAdmin)

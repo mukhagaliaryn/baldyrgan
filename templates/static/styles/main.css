@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --red: #5f27cd;
+  --red: #0084FF;
 }
+
 
 * {
   margin: 0;
@@ -25,7 +26,6 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('https://trashbox.ru/ifiles/1164635_13ad40_image_34.png-orig/sky-children-of-the-light-android-8.jpg');
     overflow: hidden;
 }
 
@@ -140,6 +140,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     margin-right: 10px;
     min-width: 220px;
+    max-width: 260px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -204,12 +205,12 @@ body {
     width: 250px;
 }
 
-.poster {
+.box .poster {
     height: 145px;
     overflow: hidden;
 }
 
-.poster img {
+.box .poster img {
     width: 100%;
     height: auto;
 }
@@ -224,28 +225,28 @@ body {
     color: #333;
 }
 
-.category {
+.box .category {
     padding: 5px 10px;
     border-bottom: 1px solid silver;
 }
 
-.category span {
+.box .category span {
     font-size: 12px;
     color: dimgray;
 }
 
-.body {
+.box .body {
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
 }
 
-.body span {
+.box .body span {
     font-size: 12px;
     color: dimgray;
 }
 
-.link {
+.box .link {
     margin: 10px;
     padding: 10px;
     display: block;
@@ -257,11 +258,11 @@ body {
     font-weight: bold;
 }
 
-.link i {
+.box .link i {
     margin-right: 10px;
 }
 
-.link:hover {
+.box .link:hover {
     background-color: transparent;
     color: var(--red);
 }
@@ -366,3 +367,13 @@ body {
     }
 }
 
+
+@media screen and (max-width: 545px) {
+    .box {
+        margin-bottom: 10px;
+    }
+
+    .box .poster {
+        height: auto;
+    }
+}
