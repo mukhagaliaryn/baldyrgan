@@ -1,12 +1,13 @@
 import os
 from pathlib import Path
+from decouple import config
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = config('SECRET_KEY')
 
-SECRET_KEY = 'django-insecure-+!lx)m*%_5l2ghzt#@w-17&i^6=$eys8ex%#dftif@sc%u0z=u'
-
-DEBUG = True
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['baldyrgan.pythonanywhere.com', '127.0.0.1', ]
 
@@ -14,6 +15,8 @@ ALLOWED_HOSTS = ['baldyrgan.pythonanywhere.com', '127.0.0.1', ]
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,6 +26,9 @@ INSTALLED_APPS = [
 
     'lesson.apps.LessonConfig',
 ]
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
