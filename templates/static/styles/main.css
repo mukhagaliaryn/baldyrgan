@@ -23,8 +23,6 @@
 
 body {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('https://trashbox.ru/ifiles/1164635_13ad40_image_34.png-orig/sky-children-of-the-light-android-8.jpg');
@@ -32,6 +30,8 @@ body {
 }
 
 #root {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     overflow: auto;
@@ -69,6 +69,12 @@ body {
     margin-right: 10px;
 }
 
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
 .search input {
     padding: 5px 20px;
     font-size: 14px;
@@ -81,6 +87,19 @@ body {
 
 .search input:focus {
     border: 1px solid var(--red);
+}
+
+.search button {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .intro-header .menu {
@@ -152,6 +171,15 @@ body {
 
 .sidebar form .input-group {
     padding: 10px;
+}
+
+.sidebar form .submit input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--red);
+    display: block;
+    cursor: pointer;
 }
 
 

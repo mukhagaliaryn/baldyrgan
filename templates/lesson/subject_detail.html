@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %}Baldyrgan - білім беру платформасы{% endblock %}
+{% block title %}{{ subject.title }}{% endblock %}
 
 {% block content %}
     {% for lesson in lessons %}
@@ -10,7 +10,7 @@
                     <img src="https://cdn.fs.teachablecdn.com/DYHSyOQzClnbu7UQzlhQ" alt="">
                 {% else %}
                     <img src="https://www.robo.house/wp-content/uploads/2019/09/4a5c6aea25714718b0c928cfa5545c49.jpg" alt="">
-                {% endif %}    
+                {% endif %}   
             </div>
             <h4>{{ lesson.title }}</h4>
             <div class="category">
