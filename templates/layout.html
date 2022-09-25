@@ -12,6 +12,42 @@
 </head>
 <body style="background-image: url('https://trashbox.ru/ifiles/1164635_13ad40_image_34.png-orig/sky-children-of-the-light-android-8.jpg');">
     <div id="root">
+        <!-- ============================= -->
+        <div class="window-sidebar">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Басты бет</a>
+                </li>
+                {% for subject in subjects %}
+                    <li>
+                        <a href="{% url 'subject_detail' subject.slug %}"><i class="fa-solid fa-gamepad"></i> {{ subject.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <form>
+                <h4>Сыныптар</h4>
+                <div class="input-group">
+                    <input type="checkbox" name="class-1" id="check1">
+                    <label for="check1">1-сынып</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" name="class-2" id="check2">
+                    <label for="check2">2-сынып</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" name="class-3" id="check3">
+                    <label for="check3">3-сынып</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" name="class-4" id="check4">
+                    <label for="check4">4-сынып</label>
+                </div>
+                <div class="input-group submit">
+                    <input type="submit" value="Іздеу">
+                </div>
+            </form>
+        </div>
+
         <div class="wrapper">
             <div class="header">
                 <div class="intro-header">
@@ -23,12 +59,8 @@
                     </form>
     
                     <div class="menu">
-                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                        <span><i class="fa-solid fa-bars"></i></span>
                     </div>
-    
-                    <!-- <div class="user">
-                        <span></span>
-                    </div> -->
                 </div>
             </div>
     
@@ -99,5 +131,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        console.log('Hello world');
+        const burgerMenu = document.querySelector('.menu');
+
+        burgerMenu.addEventListener('click', function(e) {
+            document.querySelector('.window-sidebar').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

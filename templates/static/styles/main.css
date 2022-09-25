@@ -42,12 +42,14 @@ body {
 }
 
 /* ===================================================== */
+
 .header {
     background-color: white;
     border-bottom: 1px solid silver;
     position: sticky;
     top: 0;
 }
+
 .intro-header {
     width: 1280px;
     margin: 0 auto;
@@ -113,17 +115,9 @@ body {
 }
 
 
-.user a {
-    font-weight: bold;
-    font-size: 14px;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 50px;
-    background-color: var(--red);
-}
-
-.user a i {
-    margin-right: 5px;
+.menu span {
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* ================================================= */
@@ -302,6 +296,64 @@ body {
 .ln ul li a {
     font-size: 12px;
     color: #333;
+}
+
+/* ================================================ */
+.window-sidebar {
+    max-width: 260px;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    display: none;
+    border-right: 1px solid silver;
+}
+
+.window-sidebar ul {
+    list-style: none;
+}
+.window-sidebar ul li a {
+    padding: 10px 20px;
+    border-bottom: 1px solid silver;
+    display: block;
+    width: 100%;
+    color: #333;
+}
+
+.window-sidebar ul li a:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+.window-sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.window-sidebar form h4 {
+    padding: 10px 20px;
+    color: dimgray;
+}
+
+.window-sidebar form .input-group {
+    padding: 10px 20px;
+}
+
+.window-sidebar form .submit input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--red);
+    display: block;
+    cursor: pointer;
+}
+
+
+
+.show {
+    display: block;
 }
 
 

@@ -14,6 +14,20 @@
 </head>
 <body style="background-image: url('https://cdn.fs.teachablecdn.com/DYHSyOQzClnbu7UQzlhQ');">
     <div id="root">
+        <!-- ============================= -->
+        <div class="window-sidebar">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Басты бет</a>
+                </li>
+                {% for lesson in lessons %}
+                    <li>
+                        <a href="{% url 'lesson_detail' lesson.slug %}"><i class="fa-solid fa-graduation-cap"></i> {{ lesson.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
         <div class="wrapper">
             <div class="header">
                 <div class="intro-header">
@@ -25,7 +39,7 @@
                     </form>
     
                     <div class="menu">
-                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                        <span><i class="fa-solid fa-bars"></i></span>
                     </div>
                 </div>
             </div>
@@ -87,5 +101,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        console.log('Hello world');
+        const burgerMenu = document.querySelector('.menu');
+
+        burgerMenu.addEventListener('click', function(e) {
+            document.querySelector('.window-sidebar').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
