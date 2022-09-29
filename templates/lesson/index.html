@@ -17,8 +17,8 @@
                 <span>{{ lesson.get_class_room_display }}-сынып</span>
             </div>
             <div class="body">
-                <span><i class="fa-solid fa-eye"></i> {{ lesson.view }} қаралым</span>
-                <span><i class="fa-solid fa-clock"></i> {{ lesson.date_created }}ж</span>
+                <span><i class="fa-solid fa-eye"></i> {{ lesson.view }}</span>
+                <span><i class="fa-solid fa-clock"></i> {{ lesson.date_created }}</span>
             </div>
             <a href="{% url 'lesson_detail' lesson.slug %}" class="link"><i class="fa-solid fa-play"></i> Бастау</a>
         </div>

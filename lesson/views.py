@@ -116,10 +116,12 @@ def lesson_detail(request, slug):
     lessons = Lesson.objects.filter(subject=lesson.subject, class_room=lesson.class_room)
     lesson.view = lesson.view + 1
     lesson.save()
+    task_list = Task.objects.filter(lesson=lesson)
 
     context = {
         'lesson': lesson,
-        'lessons': lessons
+        'lessons': lessons,
+        'tasks': task_list
     }
 
     return render(request, 'lesson/lesson_detail.html', context)

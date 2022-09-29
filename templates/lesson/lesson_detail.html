@@ -15,4 +15,15 @@
             <p><i class="fa-solid fa-eye"></i> Қаралым саны: {{ lesson.view }}</p>
         </div>
     </div>
+    <div class="tasks">
+        <h3>Қосымша материалдар</h3>
+        <div class="block">
+            {% for task in tasks %}
+            <div class="task-box">
+                <span>{{ task.title }}</span>
+                <a href="">{{ task.file }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

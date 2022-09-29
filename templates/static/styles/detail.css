@@ -5,7 +5,6 @@
 
 .detail {
     background-color: white;
-    margin-right: 10px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 10px silver;
@@ -25,9 +24,10 @@
 
 .detail .body {
     text-align: left;
-    padding: 10px;
+    padding: 10px 40px;
     border-bottom: 1px solid silver;
     color: #333;
+    font-size: 14px;
 }
 
 .detail .more {
@@ -41,105 +41,18 @@
     font-size: 14px;
 }
 
-
-
 /* ======================================== */
-.project {
-    padding: 20px;
-    display: flex;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px silver;
-    margin-bottom: 10px;
-}
-
-.project .image {
-    width: 160px;
-    overflow: hidden;
-    margin-right: 20px;
-}
-.project .image img {
-    width: 100%;
-}
-
-.project .title h3 {
-    padding-bottom: 10px;
-    border-bottom: 1px solid silver;
-    color: #333;
-}
-
-.project .title p {
-    padding-top: 10px;
-    color: dimgray;
-}
-
-.project .title a {
-    display: inline-block;
-    padding: 5px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--red);
-    background-color: var(--red);
-    color: white;
-}
-
-.project .title a:hover {
-    background-color: transparent;
-    border: 1px solid var(--red);
-    color: var(--red);
-}
-
-
-/* ================================== */
-.test {
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px silver;
-    background-color: white;
-    margin-bottom: 10px;
-}
-
-.test .question {
-    display: flex;
-    margin-bottom: 20px;
-
-}
-
-.test .question span {
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-.test .answers .input-group {
-    padding: 5px 20px;
-}
-
-.end {
-    display: inline-block;
-    padding: 5px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--red);
-    background-color: var(--red);
-    color: white;
-}
-
-.end:hover {
-    background-color: transparent;
-    border: 1px solid var(--red);
-    color: var(--red);
-}
 
 .tasks {
+    width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px silver;
     background-color: white;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.tasks h1 {
-    padding: 20px;
+.tasks h3 {
+    padding: 10px 20px;
     border-bottom: 1px solid silver;
 }
 

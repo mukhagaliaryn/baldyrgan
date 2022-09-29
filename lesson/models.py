@@ -38,7 +38,7 @@ class Lesson(models.Model):
     class Meta:
         verbose_name = _('Lesson')
         verbose_name_plural = _('Lessons')
-        ordering = ('date_created',)
+        ordering = ('-date_created',)
 
 
 class Task(models.Model):
