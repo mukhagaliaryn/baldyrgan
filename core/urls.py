@@ -7,6 +7,8 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('lesson.urls')),
+
+    re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }), ]

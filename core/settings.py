@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'ckeditor_uploader',
     'django_cleanup.apps.CleanupConfig',
 
     'lesson.apps.LessonConfig',
@@ -124,6 +125,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates/static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 
 
 # Default primary key field type
