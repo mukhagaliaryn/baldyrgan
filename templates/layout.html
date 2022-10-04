@@ -10,7 +10,7 @@
     <link rel="stylesheet"  href="{% static 'styles/main.css' %}">
     <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
 </head>
-<body style="background-image: url('https://trashbox.ru/ifiles/1164635_13ad40_image_34.png-orig/sky-children-of-the-light-android-8.jpg');">
+<body>
     <div id="root">
         <!-- ============================= -->
         <div class="window-sidebar">
@@ -19,7 +19,8 @@
                     <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Басты бет</a>
                 </li>
                 {% for subject in subjects %}
-                    <li>
+                    <li class="">
+                        <p>{{ path }}</p>
                         <a href="{% url 'subject_detail' subject.slug %}"><i class="fa-solid fa-gamepad"></i> {{ subject.title }}</a>
                     </li>
                 {% endfor %}
@@ -113,7 +114,7 @@
         <div class="footer">
             <div class="intro-footer">
                 <div class="logo">
-                    <a href="{% url 'home' %}"><i class="fas fa-child"></i> baldyrgan</a>
+                    <a href="{% url 'index' %}"><i class="fas fa-child"></i> baldyrgan</a>
                     <p>&copy; baldyrgan 2022</p>
                     <small>Барлық авторлық құқықтар сақталған</small>
                 </div>

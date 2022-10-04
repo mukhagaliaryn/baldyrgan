@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baldyrgan - білім беру платформасы</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header style="background-image: url(https://balbobek.netlify.app/images/header-bg.png);">
+        <a href="#" class="logo"><i class="fas fa-child"></i>baldyrgan</a>
+        <div id="menu-bars" class="fas fa-bars"></div>
+        <nav class="navbar" style="background-image: url('https://balbobek.netlify.app/images/card-bg1.png');">
+            <a href="#home">Басты бет</a>
+            <a href="#features">Шолу</a>
+            <a href="#about">Жоба жайлы</a>
+            <a href="#services">Бағыттар</a>
+            <a href="#teacher">Ұстаздар</a>
+            <a href="#pricing">Тарфитер</a>
+            <a href="#contact">Контакт</a>
+            <a href="">Қаз</a>
+            <a href="">Рус</a>
+        </nav>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+    <section class="home background" style="background-image: url('https://img.freepik.com/premium-vector/boy-studying-with-book_113065-238.jpg?w=2000')" id="home">
+        <div class="content">
+            <h1>Кел балалар оқылық</h1>
+            <h3>Саналы ұрпақ ел тірегі</h3>
+            <p>
+                Тапсырма үлгілерімен және анимациялармен таныс болыңдар 
+            </p>
+            <a href="{% url 'home' %}" class="btn">Бірге бастаймыз</a>
+        </div>
+    </section>
+
+    <!-- home section ends -->
+    <!-- features section starts  -->
+    <section class="features up-and-down" id="features">
+        <div class="box-container">
+            <h3 class="title">Неге балалар бізді жақсы көреді ?</h3>
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/left-icon1.png" alt="">
+                <div class="info">
+                    <h3>Кызықты сабақтар</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/left-icon2.png" alt="">
+                <div class="info">
+                    <h3>Көптеген тапсырма түрлері</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/left-icon3.png" alt="">
+                <div class="info">
+                    <h3>Көңілді орта</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <img class="stick" src="https://balbobek.netlify.app/images/stick.png" alt="">
+
+        <div class="box-container">
+
+            <h3 class="title">Неге ата-аналар бізді таңдайды ?</h3>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/right-icon1.png" alt="">
+                <div class="info">
+                    <h3>Үздіксіз мониторинг</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/right-icon2.png" alt="">
+                <div class="info">
+                    <h3>Тәжірибелі ұстаздар</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/right-icon3.png" alt="">
+                <div class="info">
+                    <h3>Үздіксіз кері байланыс</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolor!</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- features section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about background" id="about">
+
+        <div class="image">
+            <img src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?w=2000" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Біз туралы</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit nisi quod consequuntur dolor molestiae
+                magnam magni veritatis? Tenetur optio excepturi harum eius quaerat labore cumque dolorem dignissimos
+                alias. Perspiciatis, expedita.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit minima odio est unde nesciunt
+                necessitatibus, fugiat laboriosam quidem magni? Maxime?</p>
+            <a href="#" class="btn">Толығырақ</a>
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services up-and-down" id="services">
+
+        <h1 class="heading">Біз сіздің балаларыңызға не үйретеміз ?</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="https://www.robo.house/wp-content/uploads/2019/09/4a5c6aea25714718b0c928cfa5545c49.jpg"
+                    alt="">
+                <div class="info">
+                    <h3>Робототехника</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://cdn.fs.teachablecdn.com/DYHSyOQzClnbu7UQzlhQ" alt="">
+                <div class="info">
+                    <h3>Scratch</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- teacher section starts  -->
+
+    <section class="teacher background" id="teacher">
+
+        <h1 class="heading">Біздің тәжірибелі ұстаздар</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/teacher-1.png" alt="">
+                <h3>Әсем Биболсын</h3>
+                <span>Информатика</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestiae ab soluta iste delectus
+                    facilis beatae earum reiciendis repellat, consequuntur sequi dolorem error, labore dolores ullam
+                    distinctio illo. Voluptas, molestias?</p>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/teacher-2.png" alt="">
+                <h3>Нұрлан Қаратаев</h3>
+                <span>Робототехника</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestiae ab soluta iste delectus
+                    facilis beatae earum reiciendis repellat, consequuntur sequi dolorem error, labore dolores ullam
+                    distinctio illo. Voluptas, molestias?</p>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/teacher-3.png" alt="">
+                <h3>Гүлзира Есжан</h3>
+                <span>Информатика</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestiae ab soluta iste delectus
+                    facilis beatae earum reiciendis repellat, consequuntur sequi dolorem error, labore dolores ullam
+                    distinctio illo. Voluptas, molestias?</p>
+            </div>
+
+            <div class="box">
+                <img src="https://balbobek.netlify.app/images/teacher-4.png" alt="">
+                <h3>Ерсұлтан Жолдас</h3>
+                <span>Бағдарламалау</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestiae ab soluta iste delectus
+                    facilis beatae earum reiciendis repellat, consequuntur sequi dolorem error, labore dolores ullam
+                    distinctio illo. Voluptas, molestias?</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- teacher section ends -->
+
+    <!-- pricing section starts  -->
+
+    <!-- <section class="pricing up-and-down" id="pricing">
+
+        <h1 class="heading">Тарфитік жоспарлар</h1>
+
+        <div class="box-container">
+
+            <div class="box" style="background: url(images/card-bg1.png) no-repeat;">
+                <h3>Апталық</h3>
+                <div class="price">15 000<span>тг</span></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem magnam rem harum, nostrum facilis
+                    labore excepturi dignissimos? Voluptatibus facere beatae quam quasi! Vero fugit molestias officiis
+                    quam, corrupti earum aliquid?</p>
+                <a href="#" class="btn">Таңдау</a>
+            </div>
+
+            <div class="box" style="background: url(images/card-bg2.png) no-repeat;">
+                <span class="choise">Нағыз<br>таңдау</span>
+                <h3>Айлық</h3>
+                <div class="price">30 000<span>тг</span></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem magnam rem harum, nostrum facilis
+                    labore excepturi dignissimos? Voluptatibus facere beatae quam quasi! Vero fugit molestias officiis
+                    quam, corrupti earum aliquid?</p>
+                <a href="#" class="btn">Таңдау</a>
+            </div>
+
+            <div class="box" style="background: url(images/card-bg3.png) no-repeat;">
+                <h3>Жылдық</h3>
+                <div class="price">300 000<span>тг</span></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem magnam rem harum, nostrum facilis
+                    labore excepturi dignissimos? Voluptatibus facere beatae quam quasi! Vero fugit molestias officiis
+                    quam, corrupti earum aliquid?</p>
+                <a href="#" class="btn">Таңдау</a>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- pricing section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact background" id="contact">
+
+        <div class="row">
+
+            <div class="contact-info">
+
+                <div class="box">
+                    <h3 class="title">Мекен-жайымыз</h3>
+                    <p> <i class="fas fa-map-marker-alt"></i> Шымкент, Казақстан - 160000. </p>
+                    <p> <i class="fas fa-envelope"></i> baldyrgan@gmail.com </p>
+                    <p> <i class="fas fa-phone"></i> +7 777-777-77777</p>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">Бізге жазылыңыз</h3>
+                    <a href="https://www.facebook.com/FreeWebsiteCode/" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/freewebsitecode" class="fab fa-twitter"></a>
+                    <a href="https://www.linkedin.com/in/freewebsitecode/" class="fab fa-linkedin"></a>
+                    <a href="https://www.youtube.com/FreeWebsiteCode/videos" class="fab fa-youtube"></a>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">Хабар жіберу</h3>
+                    <form action="">
+                        <input type="email" placeholder="Email">
+                        <input type="submit" class="btn" value="Жіберу">
+                    </form>
+                </div>
+
+            </div>
+
+            <form action="" class="contact-form">
+
+                <h3>Контакт</h3>
+
+                <input type="text" placeholder="Аты-жөні" class="box">
+                <input type="email" placeholder="Email" class="box">
+                <input type="number" placeholder="Телефон" class="box">
+                <textarea placeholder="Хабарлама..." class="box message" name="" id="" cols="30" rows="10"></textarea>
+
+                <input type="submit" class="btn" value="Жіберу">
+
+            </form>
+
+        </div>
+
+        <div class="image">
+            <img src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-2299.jpg?w=2000" alt="">
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <script>
+
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('nav-toggle');
+        });
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('nav-toggle');
+        }
+
+    </script>
+
+</body>
+
+</html>

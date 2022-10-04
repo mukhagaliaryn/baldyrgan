@@ -1,6 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Lesson, Subject, Task
-from django.db.models import Q
+
+
+def index(request):
+    print(request.path)
+
+    return render(request, 'index.html', {})
 
 
 def home(request):
