@@ -3,7 +3,7 @@
 {% block title %}{{ lesson.title }}{% endblock %}
 
 {% block content %}
-    <div class="detail">
+    <div class="detail" data-aos="fade-up">
         <div class="title">
             <h3>{{ lesson.title }}</h3>
         </div>
@@ -15,7 +15,7 @@
             <p><i class="fa-solid fa-eye"></i> Қаралым саны: {{ lesson.view }}</p>
         </div>
     </div>
-    <div class="tasks">
+    <div class="tasks" data-aos="fade-up" data-aos-duration="3000">
         <h3>Қосымша материалдар</h3>
         <div class="block">
             {% for task in tasks %}

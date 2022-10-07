@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/ede4e9a973.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"  href="{% static 'styles/main.css' %}">
     <link rel="shortcut icon" href="{% static '/images/icon.png' %}" type="image/x-icon">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div id="root">
@@ -66,7 +69,7 @@
             </div>
     
             <section class="main">
-                <div class="sidebar">
+                <div class="sidebar" data-aos="fade-up">
                     <ul>
                         <li>
                             <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Басты бет</a>
@@ -139,6 +142,10 @@
         burgerMenu.addEventListener('click', function(e) {
             document.querySelector('.window-sidebar').classList.toggle('show');
         });
+    </script>
+
+    <script type="text/javascript">
+        AOS.init();
     </script>
 </body>
 </html>
