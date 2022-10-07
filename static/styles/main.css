@@ -24,8 +24,7 @@
 
 body {
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: whitesmoke;
     overflow: hidden;
 }
 
@@ -48,6 +47,7 @@ body {
     border-bottom: 1px solid silver;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .intro-header {
@@ -75,14 +75,15 @@ body {
 .search {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .search input {
-    padding: 5px 20px;
+    padding: 5px 30px 5px 10px;
     font-size: 14px;
     font-family: "Inter", sans-serif;
     border: 1px solid whitesmoke;
-    border-radius: 50px;
+    border-radius: 10px;
     border: 1px solid silver;
     background-color: whitesmoke;
 }
@@ -92,13 +93,15 @@ body {
 }
 
 .search button {
+    position: absolute;
+    right: 5px;
     width: 26px;
     height: 26px;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--red);
-    color: white;
+    color: dimgray;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 5px;
@@ -126,12 +129,13 @@ body {
     display: flex;
     align-items: flex-start;
     width: 1280px;
-    margin: 40px auto;
+    margin: 20px auto;
 
 }
 
 .sidebar {
     background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgb(223, 223, 223);
     margin-right: 10px;
     min-width: 220px;
     max-width: 260px;
@@ -195,7 +199,7 @@ body {
     border-radius: 5px;
     margin: 0 5px 10px 5px;
     overflow: hidden;
-    box-shadow: 0 0 10px silver;
+    box-shadow: 0 0 10px rgb(223, 223, 223);
     width: 250px;
 }
 
@@ -355,10 +359,6 @@ body {
 .show {
     display: block;
 }
-
-
-
-
 
 
 
