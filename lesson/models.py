@@ -26,7 +26,7 @@ class Lesson(models.Model):
     )
 
     title = models.CharField(verbose_name=_('Title'), max_length=255)
-    slug = models.SlugField(verbose_name=_('Lesson slug'), max_length=255)
+    slug = models.SlugField(verbose_name=_('Lesson slug'), max_length=255, unique=True)
     class_room = models.CharField(verbose_name=_('Class'), choices=CLASS, default=CLASS[0][1], max_length=255)
     content = RichTextUploadingField(verbose_name=_('Content'), blank=True, null=True)
     subject = models.ForeignKey(Subject, verbose_name=_('Subject'), on_delete=models.CASCADE)
