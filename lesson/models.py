@@ -31,7 +31,7 @@ class Lesson(models.Model):
     content = RichTextUploadingField(verbose_name=_('Content'), blank=True, null=True)
     subject = models.ForeignKey(Subject, verbose_name=_('Subject'), on_delete=models.CASCADE)
     view = models.PositiveIntegerField(verbose_name=_('View'), default=0)
-    date_created = models.DateField(verbose_name=_('Date created'), auto_now_add=True)
+    date_created = models.DateTimeField(verbose_name=_('Date created'), auto_now_add=True)
 
     def __str__(self):
         return self.title
