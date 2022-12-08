@@ -9,12 +9,12 @@ def index(request):
 
 
 def home(request):
-    lessons = Lesson.objects.all()
+    lessons = Lesson.objects.filter(is_public=True)
     subjects = Subject.objects.all()
 
     if 'search' in request.GET:
         search = request.GET.get('search')
-        lessons = Lesson.objects.filter(title__icontains=search)
+        lessons = Lesson.objects.filter(is_public=True, title__icontains=search)
 
         context = {
             'lessons': lessons,
@@ -22,28 +22,28 @@ def home(request):
         }
 
     if 'class-1' in request.GET:
-        lessons = Lesson.objects.filter(class_room='FIRST_C')
+        lessons = Lesson.objects.filter(is_public=True, class_room='FIRST_C')
 
         context = {
             'lessons': lessons,
             'subjects': subjects
         }
     if 'class-2' in request.GET:
-        lessons = Lesson.objects.filter(class_room='SECOND_C')
+        lessons = Lesson.objects.filter(is_public=True, class_room='SECOND_C')
 
         context = {
             'lessons': lessons,
             'subjects': subjects
         }
     if 'class-3' in request.GET:
-        lessons = Lesson.objects.filter(class_room='THIRD_C')
+        lessons = Lesson.objects.filter(is_public=True, class_room='THIRD_C')
 
         context = {
             'lessons': lessons,
             'subjects': subjects
         }
     if 'class-4' in request.GET:
-        lessons = Lesson.objects.filter(class_room='FOURTH_C')
+        lessons = Lesson.objects.filter(is_public=True, class_room='FOURTH_C')
 
         context = {
             'lessons': lessons,
@@ -60,7 +60,7 @@ def home(request):
 # ======================================================================
 def subject_detail(request, slug):
     subject = get_object_or_404(Subject, slug=slug)
-    lessons = Lesson.objects.filter(subject=subject)
+    lessons = Lesson.objects.filter(subject=subject, is_public=True)
     subjects = Subject.objects.all()
 
     if 'search' in request.GET:

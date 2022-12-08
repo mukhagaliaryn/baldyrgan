@@ -32,6 +32,7 @@ class Lesson(models.Model):
     subject = models.ForeignKey(Subject, verbose_name=_('Subject'), on_delete=models.CASCADE)
     view = models.PositiveIntegerField(verbose_name=_('View'), default=0)
     date_created = models.DateTimeField(verbose_name=_('Date created'), auto_now_add=True)
+    is_public = models.BooleanField(verbose_name=_('Public'), default=False)
 
     def __str__(self):
         return self.title

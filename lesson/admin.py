@@ -14,7 +14,7 @@ class TaskTabularInline(admin.TabularInline):
 
 
 class LessonAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'class_room', 'subject', 'view', 'date_created',)
+    list_display = ('title', 'slug', 'class_room', 'subject', 'view', 'is_public', 'date_created',)
     search_fields = ('title',)
 
     inlines = [TaskTabularInline, ]
